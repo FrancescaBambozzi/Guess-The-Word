@@ -17,7 +17,7 @@ const playAgainButton = document.querySelector(".play-again");
 
 //GLOBAL VARIABLES
 let word = "magnolia";
-const guessedLetters = [];
+let guessedLetters = [];
 let remainingGuesses = 8;
 
 //fetch data for random words
@@ -125,6 +125,7 @@ const countRemainingGuesses = function (goodGuess) {
 
   if (remainingGuesses === 0) {
     message.innerHTML = `Game over! The word was <span class="highlight">${word}</span>.`;
+    startOver();
   } else if (remainingGuesses === 1) {
     span.innerText = `${remainingGuesses} guess`;
   } else {
