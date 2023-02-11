@@ -47,6 +47,7 @@ const placeHolder = function (word) {
 //add event listener when the GUESS buttton is clicked
 buttonGuess.addEventListener("click", function (e) {
   e.preventDefault();
+  letterInput.focus();
   // Empty message paragraph
   message.innerText = "";
   //store value of guessed letter from input
